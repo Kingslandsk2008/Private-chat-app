@@ -366,7 +366,7 @@ def rename_tab(tab_id):
 
 @app.route("/static/<path:filename>")
 def static_files(filename):
-    return send_from_directory("static", filename)
+    return send_from_directory(str(BASE_DIR / "static"), filename)
 
 
 @app.route("/api/models", methods=["GET"])
