@@ -18,13 +18,34 @@ function init() {
       }
     }
 
-    // Check API key
-    if (!window.KAJUU_SETTINGS.apiKey) {
-      setTimeout(() => {
-        window.showAlert('Enter API key in Settings', false);
-        document.getElementById('settingsPanel').classList.add('open');
-      }, 800);
-    }
+    // Check API key status from server first
+    fetch('/api/settings/apikey?user_id=default')
+      .then(r => r.json())
+      .then(data => {
+        if (data.configured) {
+          if (!window.KAJUU_SETTINGS.apiKey) {
+            window.KAJUU_SETTINGS.apiKey = 'global_configured_key';
+            const apiKeyInput = document.getElementById('apiKeyInput');
+            if (apiKeyInput) apiKeyInput.placeholder = 'Configured globally on server (Ready)';
+          }
+        } else {
+          // If not configured globally and not configured locally
+          if (!window.KAJUU_SETTINGS.apiKey) {
+            setTimeout(() => {
+              window.showAlert('Enter API key in Settings', false);
+              document.getElementById('settingsPanel').classList.add('open');
+            }, 800);
+          }
+        }
+      }).catch(() => {
+        // Fallback
+        if (!window.KAJUU_SETTINGS.apiKey) {
+          setTimeout(() => {
+            window.showAlert('Enter API key in Settings', false);
+            document.getElementById('settingsPanel').classList.add('open');
+          }, 800);
+        }
+      });
   });
 
   // Auto-save every 30 seconds
