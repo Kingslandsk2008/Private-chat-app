@@ -1,0 +1,22 @@
+{
+  "default": [
+    {
+      "id": "547d5627c6d9",
+      "user_message": "Say hello in one sentence",
+      "assistant_reply": "Hello, it's a pleasure to meet you.",
+      "timestamp": "2026-07-20T15:30:03.380211"
+    },
+    {
+      "id": "0ecfe372e9e1",
+      "user_message": "Count from 1 to 5",
+      "assistant_reply": "1, 2, 3, 4, 5",
+      "timestamp": "2026-07-20T15:30:26.430401"
+    },
+    {
+      "id": "e7d9aee98b9a",
+      "user_message": "hi",
+      "assistant_reply": "Hey bestie! \ud83d\udc4b\n\nHow's your day going so far? Anything fun, annoying, or just meh happening on your end? I'm here for whatever you need \u2014 chat, help with something, or just vibe \u2728\n\nText me anything, yaar \ud83d\udc95",
+      "timestamp": "2026-07-20T16:24:48.230638"
+    }
+  ]
+}

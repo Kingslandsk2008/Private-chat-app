@@ -1,0 +1,6 @@
+{
+  "name": "Kajuu AI",
+  "description": "KAJUU.AI - Think Bold. Chat Smart. OpenRouter AI Assistant",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,11 @@
+flask==3.1.0
+flask-cors==5.0.1
+requests==2.32.3
+gunicorn==23.0.0
+Pillow==11.1.0
+python-dotenv==1.1.0
+pypdf2>=3.0.0
+pymdown-extensions==10.14.3
+# Vercel deployment
+# No additional packages needed now — storage stays file-based
+# Vercel writes to /tmp in serverless
